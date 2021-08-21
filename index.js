@@ -1,0 +1,1 @@
+console.log("Node is installed. Figure out what's next");

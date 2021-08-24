@@ -1,3 +1,4 @@
+const pageStart = `
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -31,8 +32,11 @@
 		</header>
 		<div class="container">
 			<div class="row justify-content-center">
-				<!-- Manager Card formatting -->
-				<div class="col-md-5 col-lg-4 mt-4">
+`;
+
+const managerCard = (name, id, email, office) => {
+    return `
+                <div class="col-md-5 col-lg-4 mt-4">
 					<div class="card">
 						<div class="card-header manager-header">
 							<h3 class="card-title">${name}</h3>
@@ -47,8 +51,12 @@
 						</ul>
 					</div>
 				</div>
-				<!-- Engineer Card Formatting -->
-				<div class="col-md-5 col-lg-4 mt-4">
+`
+}
+
+const engineerCard = (name, id, email, github) => {
+    return `
+                <div class="col-md-5 col-lg-4 mt-4">
 					<div class="card">
 						<div class="card-header engineer-header">
 							<h3 class="card-title">${name}</h3>
@@ -63,24 +71,12 @@
 						</ul>
 					</div>
 				</div>
+`
+}
 
-				<div class="col-md-5 col-lg-4 mt-4">
-					<div class="card">
-						<div class="card-header engineer-header">
-							<h3 class="card-title">${name}</h3>
-							<h4 class="card-title">
-								<i class="fas fa-user-astronaut"></i> Engineer
-							</h4>
-						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item"><span class="fw-bold">ID #: </span>${id}</li>
-							<li class="list-group-item"><span class="fw-bold">Email: </span>${email}</li>
-							<li class="list-group-item"><span class="fw-bold">GitHub: </span>${github}</li>
-						</ul>
-					</div>
-				</div>
-				<!-- Intern Card Style -->
-				<div class="col-md-5 col-lg-4 mt-4">
+const internCard = (name, id, email, school) => {
+    return `
+                <div class="col-md-5 col-lg-4 mt-4">
 					<div class="card">
 						<div class="card-header intern-header">
 							<h3 class="card-title">${name}</h3>
@@ -95,23 +91,13 @@
 						</ul>
 					</div>
 				</div>
+`
+}
 
-				<div class="col-md-5 col-lg-4 mt-4">
-					<div class="card">
-						<div class="card-header intern-header">
-							<h3 class="card-title">${name}</h3>
-							<h4 class="card-title">
-								<i class="fas fa-user-graduate"></i> Intern
-							</h4>
-						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item"><span class="fw-bold">ID #: </span>${id}</li>
-							<li class="list-group-item"><span class="fw-bold">Email: </span>${email}</li>
-							<li class="list-group-item"><span class="fw-bold">School: </span>${school}</li>
-						</ul>
-					</div>
-				</div>
-			</div>
+const pageEnd = `
+            </div>
 		</div>
 	</body>
 </html>
+`
+module.exports = { pageStart, managerCard, engineerCard, internCard, pageEnd };

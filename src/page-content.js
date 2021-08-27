@@ -1,4 +1,6 @@
-const pageStart = `
+
+const pageHTML = cardsHTML => {
+return `
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -32,10 +34,17 @@ const pageStart = `
 		</header>
 		<div class="container">
 			<div class="row justify-content-center">
+				${cardsHTML}
+            </div>
+		</div>
+	</body>
+</html>
 `;
+}
 
-const managerCard = (name, id, email, office) => {
-    return `
+const managerCardHTML = function ({ name, id, email, office }) {
+    const managerCard = 
+`
                 <div class="col-md-5 col-lg-4 mt-4">
 					<div class="card">
 						<div class="card-header manager-header">
@@ -52,14 +61,15 @@ const managerCard = (name, id, email, office) => {
 					</div>
 				</div>
 `
-}
+console.log(managerCard)
+};
 
 const engineerCard = (name, id, email, github) => {
     return `
                 <div class="col-md-5 col-lg-4 mt-4">
 					<div class="card">
 						<div class="card-header engineer-header">
-							<h3 class="card-title">${name}</h3>
+							<h3 class="card-title">${[i].name}</h3>
 							<h4 class="card-title">
 								<i class="fas fa-user-astronaut"></i> Engineer
 							</h4>
@@ -94,10 +104,5 @@ const internCard = (name, id, email, school) => {
 `
 }
 
-const pageEnd = `
-            </div>
-		</div>
-	</body>
-</html>
-`
-module.exports = { pageStart, managerCard, engineerCard, internCard, pageEnd };
+// const pageEnd = 
+// module.exports = { pageStart, managerCardHTML, engineerCard, internCard, pageEnd }; 

@@ -150,7 +150,7 @@ const engineerQuestions = [
     },
     {
         type: 'input',
-        name: 'school',
+        name: 'github',
         message: "What is this Engineer's GitHub username?",
         validate: github => {
             if (github) {

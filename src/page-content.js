@@ -1,3 +1,4 @@
+// full page of HTML, called in index.js using the cardHTML string created in index.js
 const pageHTML = (cardHTML) => {
 	return `
 	<!DOCTYPE html>
@@ -41,10 +42,11 @@ const pageHTML = (cardHTML) => {
 	`;
 }
 
+// manager html card, created in the for loop of getHTML function in index.js
 const managerCardHTML = ({ name, id, email, office }) => {
 return `
                 <div class="col-md-5 col-lg-4 mt-4">
-					<div class="card">
+					<div class="card manager-card">
 						<div class="card-header manager-header">
 							<h3 class="card-title">${name}</h3>
 							<h5 class="card-title">
@@ -61,10 +63,11 @@ return `
 `
 };
 
+// engineer html card, created in the for loop of getHTML function in index.js
 const engineerCardHTML = ({ name, id, email, github }) => {
 return `
                 <div class="col-md-5 col-lg-4 mt-4">
-					<div class="card">
+					<div class="card engineer-card">
 						<div class="card-header engineer-header">
 							<h3 class="card-title">${name}</h3>
 							<h5 class="card-title">
@@ -81,10 +84,11 @@ return `
 `
 }
 
+// intern html card, created in the for loop of getHTML function in index.js
 const internCardHTML = ({ name, id, email, school }) => {
 return `
                 <div class="col-md-5 col-lg-4 mt-4">
-					<div class="card">
+					<div class="card intern-card">
 						<div class="card-header intern-header">
 							<h3 class="card-title">${name}</h3>
 							<h5 class="card-title">

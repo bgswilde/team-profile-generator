@@ -1,4 +1,3 @@
-
 const fs = require('fs').promises;
 const inquirer = require('inquirer');
 const Manager = require('./lib/Manager');

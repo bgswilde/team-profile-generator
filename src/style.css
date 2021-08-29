@@ -19,35 +19,29 @@ body {
     color: white;
 }
 
+.manager-card {
+    box-shadow: 0px 0px 6px 3px rgb(95 44 130 / 30%);
+}
+
 .manager-header {
     background-color: #5f2c82;
+}
+
+.engineer-card {
+    box-shadow: 0px 0px 6px 3px rgb(10 191 188 / 30%);
 }
 
 .engineer-header {
     background-color: #0ABFBC;
 }
+
+.intern-card {
+    box-shadow: 0px 0px 6px 3px rgb(255 148 114 / 35%)
+}
+
 .intern-header {
     background-color: #ff9472;
 }
-/* .header {
-    text-align: center;
-}
-
-.manager-card {
-    margin: 20rem auto;
-}
-
-.employee-card {
-    margin: 20rem auto;
-}
-
-.engineer-card {
-    margin: 20rem auto;
-}
-
-.intern-card {
-    margin: 20rem auto;
-} */
 
 @keyframes change {
     0%{
